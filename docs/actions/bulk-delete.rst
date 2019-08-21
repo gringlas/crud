@@ -17,6 +17,20 @@ You can use the ``Bulk\DeleteAction`` class to delete a group of database record
       }
   }
 
+Example
+-------
+
+Bulk Delete awaits a field `id` with a list of ids to delete in `$this->getRequest()->getData()`, like: 
+
+.. code-block:: phpinline
+  
+  {
+    "id" : [ 2, 4, 12 ]
+  }
+
+It would then try to bulk delete given ids.
+
+
 Configuration
 -------------
 
